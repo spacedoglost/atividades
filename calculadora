@@ -1,0 +1,50 @@
+def soma(n1, n2):
+    val = (int(n1) + int(n2))
+    return val
+
+
+def subtracao(n1, n2):
+    val = (int(n1) - int(n2))
+    return val
+
+
+def mult(n1, n2):
+    val = (int(n1) * int(n2))
+    return val
+
+
+def div(n1, n2):
+    val = (int(n1) / int(n2))
+    return val
+
+
+def potencia(n1, n2):
+    val = (int(n1) * int(n2))
+    return val
+
+
+desejo = input('você deseja usar a calculadora? ')
+user = input('digite seu user ')
+while desejo.upper() == 'SIM':
+    operacao = input('qual operação ira usar? ')
+    
+    if operacao.upper() == 'SAIR':
+        break
+    
+    num1 = input('o primeiro numero ')
+    num2 = input('o segundo numero ')
+    
+    if operacao == 'soma':
+        print(f'{num1} soma {num2} é igual a {soma(num1, num2)}, {user}' )
+    elif operacao == 'subtração':
+        print(f'{num1} subitraido {num2} é igual a {subtracao(num1, num2)}, {user}' )
+    elif operacao == 'multiplicação':
+        print(f'{num1} multiplicado {num2} é igual a {mult(num1, num2)}, {user}' )
+    elif operacao == 'divisão':
+        print(f'{num1} dividido por {num2} é igual a {div(num1, num2)}, {user}' )
+    elif operacao == 'potencia':
+        print(f'{num1} na base {num2} é igual a {potencia(num1, num2)}, {user}' )
+    else:
+        print('essa operação não existe ou não está disponivel')
+
+print('obrigado por usar')
