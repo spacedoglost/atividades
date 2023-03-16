@@ -1,7 +1,17 @@
-num = int(input('Digita a porra do numero '))
+def impoupar(x):
+    val = int(x) % 2 == 0
+    if val: return 'este numero é par'
+    else: return 'este numero é impar'
 
-num %=2
-
-num2 = "seu numero é par" if num==0 else 'seu numero é impar'
-
-print(num2)
+sn=(input('você deseja verificar se algum numero é par ou impar? '))
+while sn == 'sim': 
+   n=input('qual seria este numero? ')
+   digito = n.isnumeric()
+   if digito: print(impoupar(n))
+   else: print('isso nao é um numero')
+   sn=(input('deseja continuar? '))
+   if sn == 'nao': 
+       break
+   else:
+       sn = input('digite sim ou nao. Aqui ')
+print('obrigado por usar')
